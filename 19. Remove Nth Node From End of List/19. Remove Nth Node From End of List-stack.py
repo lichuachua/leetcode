@@ -17,5 +17,23 @@ class Solution:
         return res.next
 
 """"tmp必须来自于res
-使用tmp = ListNode(0, head)，会出错
+使用tmp = ListNode(0, head)，会出错，两个地址
+
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        # 可能会删除第一个节点，需要设置前置节点
+        res = ListNode(0, head)
+        tmp = ListNode(0, head)
+        stack1,stack2 = [],[]
+        while tmp.next is not None:
+            stack1.append(tmp)
+            tmp = tmp.next
+        while res.next is not None:
+            stack2.append(res)
+            res = res.next
+        print(stack1)
+        print()
+        print(stack2)
+        prev = stack1[len(stack1) - n]
+        prev.next = prev.next.next
+        return res.next
 """

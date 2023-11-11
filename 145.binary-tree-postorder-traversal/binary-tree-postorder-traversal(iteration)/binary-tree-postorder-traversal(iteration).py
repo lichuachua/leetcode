@@ -10,6 +10,7 @@ class Solution:
         if root is None:
             return res
         stack = []
+        # 前置保存右节点的根
         preRight = None
         while len(stack) > 0 or root is not None:
             while root is not None:

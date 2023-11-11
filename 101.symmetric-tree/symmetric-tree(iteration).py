@@ -5,14 +5,20 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def lcc(self, left, right):
-        if left is None and right is None:
-            return True
-        elif left is None or right is None or right.val != left.val:
-            return False
-        return self.lcc(left.right, right.left) & self.lcc(left.left, right.right)
+    def isSymmetric(self, root) -> bool:
+        leftQ,rightQ = [root.left],[root.right]
+        while len(leftQ)>0 and len(rightQ)>0 :
+            l,r = leftQ.pop(0),rightQ.pop(0)
+            if not (l or r) :
+                continue
+            if not (l and r):
+                return False
+            if l.val != r.val:
+                return False
+            leftQ.extend([l.left,l.right])
+            rightQ.extend([r.right,r.left])
 
-    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-        if root is None:
+        if len(leftQ)==0 and len(rightQ)==0 :
             return True
-        return self.lcc(root.left, root.right)
+        else:
+            return False

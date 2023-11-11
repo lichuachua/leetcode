@@ -6,23 +6,10 @@
 #         self.right = right
 class Solution:
     def minDepth(self, root: Optional[TreeNode]) -> int:
-        # 使用层次遍历
         if root is None:
             return 0
-        result = 1
-        queue = [root]
-        while len(queue) > 0:
-            length = len(queue)
-            i = 0
-            while i < length:
-                value = queue[0]
-                queue = queue[1:]
-                if value.left is None and value.right is None:
-                    return result
-                if value.left is not None:
-                    queue.append(value.left)
-                if value.right is not None:
-                    queue.append(value.right)
-                i += 1
-            result += 1
-        return result
+        if root.left is None and root.right is not None:
+            return self.minDepth(root.right) + 1
+        if root.right is None and root.left is not None:
+            return self.minDepth(root.left) + 1
+        return min(self.minDepth(root.left), self.minDepth(root.right)) + 1

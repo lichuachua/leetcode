@@ -16,14 +16,14 @@ class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if head is None:
             return head
-        res = ListNode(0,head)
+        res = ListNode(0, head)
         tmp = res
-        while tmp.next is not None and tmp.next.next is not None :
+        while tmp.next is not None and tmp.next.next is not None:
             if tmp.next.val == tmp.next.next.val:
                 duplicatesNum = tmp.next.val
                 while tmp.next is not None and tmp.next.val == duplicatesNum:
                     tmp.next = tmp.next.next
-            else :
+            else:
                 tmp = tmp.next
         return res.next
 

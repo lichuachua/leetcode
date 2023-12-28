@@ -19,4 +19,3 @@ class Solution:
         head2.next = None
         head1.next = res2.next
         return res1.next
-

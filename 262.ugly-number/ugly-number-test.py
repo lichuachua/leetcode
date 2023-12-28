@@ -10,6 +10,7 @@ class Solution:
 
         return n == 1
 
+
 re = Solution()
 
 print(re.isUgly(14))

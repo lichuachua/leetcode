@@ -9,5 +9,6 @@ class Solution:
         else:
             return False
 
+
 re = Solution()
 print(re.detectCapitalUse("aDa"))

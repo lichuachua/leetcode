@@ -14,5 +14,6 @@ class Solution:
             res.append(resTmp)
         return res[rowIndex - 1]
 
+
 re = Solution()
 print(re.getRow(5))

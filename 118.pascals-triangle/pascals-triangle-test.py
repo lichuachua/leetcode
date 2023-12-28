@@ -13,5 +13,6 @@ class Solution:
             res.append(resTmp)
         return res
 
+
 re = Solution()
 print(re.generate(5))

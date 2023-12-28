@@ -47,19 +47,20 @@ class Solution:
         if root is None:
             return result
         queue = [root]
-        while len(queue) > 0 :
+        while len(queue) > 0:
             level = []
             currentQueue = queue
             queue = []
             for item in currentQueue:
                 level.append(item.val)
-                if item.left is not None :
+                if item.left is not None:
                     queue.append(item.left)
-                if item.right is not None :
+                if item.right is not None:
                     queue.append(item.right)
             result.append(level)
 
         return result
+
 
 re = Solution()
 print(re.levelOrder(binary_tree_root))

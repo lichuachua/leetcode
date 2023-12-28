@@ -18,6 +18,7 @@ class Solution:
         slow.next = slow.next.next
         return tmp.next
 
+
 """"
 Note: 在遍历时候，不能直接从头部开始遍历，要设置一个哑点作为头节点的上一个节点，因为头节点可能被删除
 

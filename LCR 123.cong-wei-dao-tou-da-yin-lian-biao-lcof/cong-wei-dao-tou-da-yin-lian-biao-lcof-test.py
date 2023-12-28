@@ -11,13 +11,15 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def reverseBookList(self, head: Optional[ListNode]) -> [int]:
         res = []
-        while head is not None :
+        while head is not None:
             res = [head.val] + res
             head = head.next
         return res
+
 
 e = ListNode(5, None)
 d = ListNode(4, e)

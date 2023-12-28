@@ -6,7 +6,7 @@
 class Solution:
     def reverseBookList(self, head: Optional[ListNode]) -> List[int]:
         res = []
-        while head is not None :
+        while head is not None:
             res = [head.val] + res
             head = head.next
         return res

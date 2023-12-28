@@ -30,20 +30,24 @@ binary_tree_root = build_binary_tree()
 # 打印二叉树
 print_binary_tree(binary_tree_root)
 
+
 class Solution:
 
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        if root is None :
+        if root is None:
             return True
+
         def maxDepth(root):
             if root is None:
                 return True
             return max(maxDepth(root.left), maxDepth(root.right)) + 1
-        level = abs(maxDepth(root.right)-maxDepth(root.left))
-        if level <= 1 :
+
+        level = abs(maxDepth(root.right) - maxDepth(root.left))
+        if level <= 1:
             return True
         else:
             return False
+
 
 re = Solution()
 print(re.isBalanced(binary_tree_root))

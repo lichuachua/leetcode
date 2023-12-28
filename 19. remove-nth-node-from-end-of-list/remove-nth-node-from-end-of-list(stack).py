@@ -16,6 +16,7 @@ class Solution:
         prev.next = prev.next.next
         return res.next
 
+
 """"tmp必须来自于res
 使用tmp = ListNode(0, head)，会出错，两个地址
 

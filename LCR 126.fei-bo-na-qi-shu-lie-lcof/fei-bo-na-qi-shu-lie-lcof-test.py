@@ -9,5 +9,6 @@ class Solution:
             i += 1
         return b
 
+
 re = Solution()
 print(re.fib(3))

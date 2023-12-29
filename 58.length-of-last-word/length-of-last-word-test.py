@@ -8,5 +8,6 @@ class Solution:
                 break
         return count
 
+
 re = Solution()
 print(re.lengthOfLastWord("Hello World"))

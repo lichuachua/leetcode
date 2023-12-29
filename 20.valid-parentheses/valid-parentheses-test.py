@@ -15,5 +15,6 @@ class Solution:
                 return False
         return len(stack) == 0
 
+
 re = Solution()
 print(re.isValid("]"))

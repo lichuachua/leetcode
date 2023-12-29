@@ -12,5 +12,6 @@ class Solution:
                 res[temp - index] += s[i]
         return ''.join(res)
 
+
 re = Solution()
-print(re.convert("PAYPALISHIRING",3))
+print(re.convert("PAYPALISHIRING", 3))

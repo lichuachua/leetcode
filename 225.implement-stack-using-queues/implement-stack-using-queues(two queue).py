@@ -5,7 +5,7 @@ class MyStack:
         self.queue2 = []  # 中间栈
 
     def push(self, x: int) -> None:
-        self.queue1.append(x)
+        self.queue1.append(x)  # q1作为栈，插入队尾，即栈头
 
     def pop(self) -> int:
         for i in range(0, len(self.queue1) - 1):

@@ -7,3 +7,9 @@ class Solution:
         nums1 = nums[:len(nums) - k]
         nums2 = nums[len(nums) - k:]
         nums[:] = nums2 + nums1
+
+
+""""
+Solution：直接切割
+直接切割，将前面 [k...n−1] 区间上的元素和[0...k−1] 区间上的元素拼接
+"""

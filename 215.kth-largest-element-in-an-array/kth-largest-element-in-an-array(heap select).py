@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Solution:
     def heapify(self, arr, n, i):
         # 将当前节点设为最大
@@ -22,25 +19,25 @@ class Solution:
             # 递归调整受影响的子树
             self.heapify(arr, n, largest)
 
-    def heap_sort(self, arr):
+    def heap_sort(self, arr, k):
         n = len(arr)
 
         # 构建最大堆
-        # 叶子节点不需要进行 heapify 调整。这是因为叶子节点没有子节点，
-        # 因此它们天然地满足堆的性质（既最大堆性质或最小堆性质）。
-
         for i in range(n // 2 - 1, -1, -1):
             self.heapify(arr, n, i)
 
-        # 一个个取出元素进行堆排序
-        for i in range(n - 1, 0, -1):
-            arr[i], arr[0] = arr[0], arr[i]  # 交换
-            self.heapify(arr, i, 0)  # 调整堆
+        # 从第 n-1 个元素开始，依次将元素插入堆中，并调整堆
+        for i in range(n - 1, n - k - 1, -1):
+            arr[0], arr[i] = arr[i], arr[0]
+            self.heapify(arr, i, 0)
+
+        return arr[n - k]
 
     def findKthLargest(self, nums: List[int], k: int) -> int:
-        self.heap_sort(nums)
-        return nums[len(nums) - k]
+        return self.heap_sort(nums, k)
 
 
-re = Solution()
-print(re.findKthLargest([3, 2, 1, 5, 6, 4], 2))
+"""
+Solution：使用堆选择
+相比堆排序，这个好处是在排序过程中就选择最大的第K个值，节省后面元素排序的过程
+"""

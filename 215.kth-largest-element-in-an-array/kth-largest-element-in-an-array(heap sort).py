@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Solution:
     def heapify(self, arr, n, i):
         # 将当前节点设为最大
@@ -35,12 +32,13 @@ class Solution:
         # 一个个取出元素进行堆排序
         for i in range(n - 1, 0, -1):
             arr[i], arr[0] = arr[0], arr[i]  # 交换
-            self.heapify(arr, i, 0)  # 调整堆
+            self.heapify(   arr, i, 0)  # 调整堆
 
     def findKthLargest(self, nums: List[int], k: int) -> int:
         self.heap_sort(nums)
         return nums[len(nums) - k]
 
 
-re = Solution()
-print(re.findKthLargest([3, 2, 1, 5, 6, 4], 2))
+"""
+Solution：先进行堆排序，再选择最大的第K个元素
+"""

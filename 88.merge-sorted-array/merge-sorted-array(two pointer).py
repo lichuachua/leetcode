@@ -15,3 +15,11 @@ class Solution:
             k += 1
         if j >= 0:
             nums1[:j + 1] = nums2[:j + 1]
+
+
+"""
+Solution:双指针
+nums1 的初始长度为 m + n，从nums1和nums2的最后元素开始遍历，
+找到两个队列中最大的元素，放到nums1的末尾
+若nums2还有元素未和nums1中的元素比较，则将nums2剩余元素（是最小的）直接拼接在nums1前面剩余空间
+"""

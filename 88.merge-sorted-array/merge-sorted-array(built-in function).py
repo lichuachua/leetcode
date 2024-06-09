@@ -5,3 +5,10 @@ class Solution:
         """
         nums1[m:] = nums2
         nums1.sort()
+
+
+"""
+Solution:数组合并，再排序
+将nums1数组m之后的元素置为nums2
+使用内置函数进行排序
+"""

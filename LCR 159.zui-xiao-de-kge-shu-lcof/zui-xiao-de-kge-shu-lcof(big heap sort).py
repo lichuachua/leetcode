@@ -34,11 +34,11 @@ class Solution:
             arr[i], arr[0] = arr[0], arr[i]  # 交换
             self.heapify(arr, i, 0)  # 调整堆
 
-    def findKthLargest(self, nums: List[int], k: int) -> int:
-        self.heap_sort(nums)
-        return nums[len(nums) - k]
+    def inventoryManagement(self, stock: List[int], cnt: int) -> List[int]:
+        self.heap_sort(stock)
+        return stock[:cnt]
 
 
 """
-Solution：先进行堆排序，再选择最大的第K个元素
+Solution：使用堆排序
 """

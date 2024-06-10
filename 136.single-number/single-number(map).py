@@ -10,3 +10,8 @@ class Solution:
             if value == 1:
                 return key
         return 0
+"""
+Solution:哈希
+使用map存储每个值出现的次数
+遍历map
+"""

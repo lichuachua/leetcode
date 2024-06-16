@@ -15,3 +15,7 @@ class Solution:
             return int(high - 1)
         else:
             return int(high)
+
+"""
+Solution:二分查找
+"""

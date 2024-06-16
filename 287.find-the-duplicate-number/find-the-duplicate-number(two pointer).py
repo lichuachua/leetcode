@@ -10,3 +10,10 @@ class Solution:
         while slow != fast:
             slow, fast = nums[slow], nums[fast]
         return slow
+
+
+"""
+Solution: 快慢指针，双指针
+类似判断链表是否有环的题解
+将这些数字想象成链表中的结点，数组中数字代表下一个结点的数组下标
+"""

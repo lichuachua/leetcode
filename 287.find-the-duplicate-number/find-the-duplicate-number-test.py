@@ -17,3 +17,10 @@ class Solution:
 
 re = Solution()
 print(re.findDuplicate([1, 3, 4, 2, 2]))
+
+"""
+和 169 majority-element相似，只不过这个要求空间复杂度为常数级别
+hash
+divide and conquer
+moore majority vote algorithm（需要出现超过一半才能使用）
+"""

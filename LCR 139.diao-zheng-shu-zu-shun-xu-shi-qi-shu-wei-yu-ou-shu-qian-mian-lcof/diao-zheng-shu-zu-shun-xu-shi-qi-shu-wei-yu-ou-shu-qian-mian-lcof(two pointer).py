@@ -11,3 +11,9 @@ class Solution:
                 left += 1
                 right -= 1
         return actions
+
+
+"""
+Solution:双指针
+使用left和right两个指针，将left上为偶数的和right为奇数的元素调换
+"""

@@ -14,3 +14,9 @@ class Solution:
             else:
                 tmp = tmp.next
         return head
+
+
+"""
+Solution:双指针遍历
+两个指针指向当前元素和下一个元素，如果相等则跳过当前元素
+"""

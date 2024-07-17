@@ -16,3 +16,10 @@ class Solution:
             temp.next = arr[i]
             temp = temp.next
         return result.next
+
+
+"""
+Solution:遍历
+先遍历一遍，存储每个元素的值，
+再次你需遍历，生成链表
+"""

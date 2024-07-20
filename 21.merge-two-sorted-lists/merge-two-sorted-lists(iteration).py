@@ -15,3 +15,9 @@ class Solution:
         else:
             list2.next = self.mergeTwoLists(list1, list2.next)
             return list2
+
+
+"""
+Solution:递归遍历
+递归遍历每次找到两个链表中最小的元素作为result链表的头元素，头元素next
+"""

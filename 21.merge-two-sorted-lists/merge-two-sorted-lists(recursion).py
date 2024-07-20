@@ -20,3 +20,9 @@ class Solution:
         else:
             tmp.next = list2
         return res.next
+
+
+"""
+Solution:迭代遍历
+迭代遍历两个链表，每次选择最小的元素放到result链表
+"""

@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
-         # 找中点
+        # 找中点
         slow, fast = head, head
         while fast and fast.next:
             slow = slow.next
@@ -27,3 +27,12 @@ class Solution:
             head = head.next
 
         return True
+
+
+"""
+
+Solution:反转链表
+找到链表中点，反转后半部分，遍历前半部分和后半部分，看是否一致。
+注意：
+不能直接全部反转后进行比较，因为我们只能在原链表上进行反转，反转后找不到原链表
+"""

@@ -15,3 +15,10 @@ class Solution:
                 return headB
             headB = headB.next
         return None
+
+"""
+Solution: hash map
+分别遍历两个链表，
+遍历链表A，使用哈希表存储该节点是否被访问过。
+遍历链表B，如果访问过就说明相交，直接return
+"""

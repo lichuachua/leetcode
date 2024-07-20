@@ -35,3 +35,11 @@ class Solution:
                 return headA
             headA, headB = headA.next, headB.next
         return None
+
+
+"""
+Solution: 遍历
+遍历两个链表，找到两个链表中短的那个，
+将长链表按照短链表长度将其头部多余节点去掉，
+遍历两个长度一样的链表，找到相等的第一个结点
+"""

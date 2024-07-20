@@ -38,3 +38,8 @@ class Solution:
         prev.next = prev.next.next
         return res.next
 """
+
+"""
+Solution: 栈（数组）
+数组存储每个结点，之后找到要删除结点的前置结点，删除
+"""

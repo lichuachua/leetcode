@@ -16,3 +16,10 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
         return True
+
+
+"""
+Solution:快慢指针
+类似142
+快指针走两步，慢指针走一步，若存在环，迟早快慢指针相遇，若快指针到链表末尾，则无环
+"""

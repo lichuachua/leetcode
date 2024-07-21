@@ -4,7 +4,18 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # 原地反转-头插法
+        result = None
+        tmp = None
+        while head:
+            tmp = head.next
+            head.next = result
+            result = head
+            head = tmp
+        return result
+
+    def addTwoNumbers2(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         res = ListNode()
         result = res
         jinwei = 0
@@ -43,8 +54,17 @@ class Solution:
             res = res.next
         return result.next
 
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        l1 = self.reverseList(l1)
+        l2 = self.reverseList(l2)
+        res = self.addTwoNumbers2(l1, l2)
+        return self.reverseList(res)
+
 
 """
-Solution：模拟
-模拟大数加法，按位相加，将结果添加到新链表上。需要注意进位和对 10 取余。
+Solution：链表反转+模拟+链表反转
+类似题 2
+先链表反转
+调用题目2的模拟
+将结果链表反转
 """

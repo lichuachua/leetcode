@@ -17,5 +17,6 @@ class Solution:
             res = fast - slow
         return res
 
+
 re = Solution()
-print(re.findMaxConsecutiveOnes([1,1,0,1,1,1]))
+print(re.findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]))

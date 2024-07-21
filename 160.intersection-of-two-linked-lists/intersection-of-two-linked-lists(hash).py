@@ -16,6 +16,7 @@ class Solution:
             headB = headB.next
         return None
 
+
 """
 Solution: hash map
 分别遍历两个链表，

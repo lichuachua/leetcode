@@ -16,6 +16,7 @@ class Solution:
         else:
             return int(high)
 
+
 """
 Solution:二分查找
 """

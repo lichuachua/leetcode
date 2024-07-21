@@ -3,6 +3,7 @@ class Solution:
         nums.sort()
         return nums[len(nums) // 2]
 
+
 """
 Solution: 排序
 先堆数组元素进行排序，

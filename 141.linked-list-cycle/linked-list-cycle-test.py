@@ -11,6 +11,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         m = {}

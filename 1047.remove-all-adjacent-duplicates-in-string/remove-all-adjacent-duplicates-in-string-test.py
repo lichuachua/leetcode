@@ -8,5 +8,6 @@ class Solution:
                 stack.append(ch)
         return ''.join(stack)
 
+
 re = Solution()
 print(re.removeDuplicates("abbaca"))

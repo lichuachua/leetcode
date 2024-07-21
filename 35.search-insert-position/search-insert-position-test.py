@@ -15,5 +15,6 @@ class Solution:
                 low = mid + 1
         return low
 
+
 re = Solution()
-print(re.searchInsert([1,3,5,6],7))
+print(re.searchInsert([1, 3, 5, 6], 7))

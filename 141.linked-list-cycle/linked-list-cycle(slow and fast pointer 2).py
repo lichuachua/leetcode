@@ -14,6 +14,7 @@ class Solution:
                 return True
         return False
 
+
 """
 Solution:快慢指针
 类似142

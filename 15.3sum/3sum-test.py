@@ -8,7 +8,7 @@ class Solution:
         ans = []
         for i in range(n):
             # 去除i的重复元素
-            if i> 0 and nums[i] == nums[i - 1]:
+            if i > 0 and nums[i] == nums[i - 1]:
                 continue
             left, right = i + 1, n - 1
             while left < right:
@@ -29,6 +29,5 @@ class Solution:
         return ans
 
 
-
-re =Solution()
-print(re.threeSum([-1,0,1,2,-1,-4]))
+re = Solution()
+print(re.threeSum([-1, 0, 1, 2, -1, -4]))

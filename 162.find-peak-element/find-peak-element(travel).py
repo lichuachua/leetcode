@@ -6,6 +6,7 @@ class Solution:
                 res = i
         return res
 
+
 """
 Solution：遍历找最大值
 最大值肯定是峰值

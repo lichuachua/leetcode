@@ -36,5 +36,6 @@ class Solution:
                 break
         return res
 
+
 re = Solution()
-print(re.spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))
+print(re.spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))

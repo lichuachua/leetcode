@@ -15,5 +15,6 @@ class Solution:
                 right -= 1
         return actions
 
+
 re = Solution()
-print(re.trainingPlan([1,2,3,4,5]))
+print(re.trainingPlan([1, 2, 3, 4, 5]))

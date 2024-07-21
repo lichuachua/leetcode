@@ -14,6 +14,7 @@ class Solution:
                 right_count += 1
 
         return left_majority if left_count > right_count else right_majority
+
     # 分解过程
     def divide(self, nums: List[int], lo: int, hi: int) -> List[int]:
         # 基准情况：数组长度为1时，直接返回该元素
@@ -28,7 +29,8 @@ class Solution:
         return self.conquer(left_majority, right_majority, nums, lo, hi)
 
     def majorityElement(self, nums: List[int]) -> int:
-        return self.divide(nums,0,len(nums)-1)
+        return self.divide(nums, 0, len(nums) - 1)
+
 
 re = Solution()
-print(re.majorityElement([2,2,1,1,1,2,2]))
+print(re.majorityElement([2, 2, 1, 1, 1, 2, 2]))

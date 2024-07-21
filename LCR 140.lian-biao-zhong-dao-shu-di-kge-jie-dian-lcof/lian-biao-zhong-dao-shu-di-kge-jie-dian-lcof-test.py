@@ -11,6 +11,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -27,7 +28,6 @@ class Solution:
             slow = slow.next
             fast = fast.next
         return slow.next
-
 
 
 d = ListNode(8, None)

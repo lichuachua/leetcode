@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         """
@@ -12,5 +14,6 @@ class Solution:
             fast += 1
         print(nums)
 
+
 re = Solution()
-re.moveZeroes([0,1,0,3,12])
+re.moveZeroes([0, 1, 0, 3, 12])

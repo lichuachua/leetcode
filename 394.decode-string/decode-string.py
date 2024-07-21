@@ -14,6 +14,7 @@ class Solution:
                 res += item
         return res
 
+
 """
 Solution：栈
 遍历字符串，使用栈存储【数字和结果】元组

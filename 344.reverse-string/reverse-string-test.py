@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     def reverseString(self, s: List[str]) -> None:
         """
@@ -8,5 +10,6 @@ class Solution:
         # 而 s = s[::-1] 则是创建一个新的反转字符串并赋值给变量 s
         s[:] = s[::-1]
 
+
 re = Solution()
-re.reverseString(["h","e","l","l","o"])
+re.reverseString(["h", "e", "l", "l", "o"])

@@ -17,6 +17,7 @@ class Solution:
             j -= 1
         return True
 
+
 """
 Solution:遍历+双指针
 利用数组，将链表元素依次存入。

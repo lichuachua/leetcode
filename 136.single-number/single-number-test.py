@@ -8,5 +8,6 @@ class Solution:
             res = res ^ nums[i]
         return res
 
+
 re = Solution()
-print(re.singleNumber([2,2,1]))
+print(re.singleNumber([2, 2, 1]))

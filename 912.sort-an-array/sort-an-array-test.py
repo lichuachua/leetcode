@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     # 合并过程两个有序数组
     def merge(self, left_nums: List[int], right_nums: List[int]) -> List[int]:
@@ -35,6 +36,7 @@ class Solution:
 
     def sortArray(self, nums: List[int]) -> List[int]:
         return self.mergeSort(nums)
+
 
 re = Solution()
 print(re.sortArray([8, 9, 1, 7, 2, 3, 5, 4, 6, 0]))

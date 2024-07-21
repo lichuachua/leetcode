@@ -14,5 +14,6 @@ class Solution:
                 return mid
         return -1
 
+
 re = Solution()
-print(re.search([-1,0,3,5,9,12],9))
+print(re.search([-1, 0, 3, 5, 9, 12], 9))

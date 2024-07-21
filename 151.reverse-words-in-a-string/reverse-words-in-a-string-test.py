@@ -23,7 +23,5 @@ class Solution:
         return words
 
 
-
-
 re = Solution()
 print(re.reverseWords("the sky is blue"))

@@ -23,7 +23,6 @@ class Solution:
         # 返回枢轴的索引
         return right
 
-
     def randomized_partition(self, nums, low, high):
         # 随机选择枢轴
         pivot_index = random.randint(low, high)
@@ -31,7 +30,6 @@ class Solution:
         nums[pivot_index], nums[low] = nums[low], nums[pivot_index]
         # 调用哨兵划分函数
         return self.partition(nums, low, high)
-
 
     def quicksort(self, nums, low, high):
         if low < high:
@@ -42,9 +40,8 @@ class Solution:
             self.quicksort(nums, pivot_index + 1, high)
         return nums
 
-
     def sortArray(self, nums: List[int]) -> List[int]:
-        return self.quicksort(nums,0,len(nums)-1)
+        return self.quicksort(nums, 0, len(nums) - 1)
 
 
 """

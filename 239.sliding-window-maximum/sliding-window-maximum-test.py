@@ -14,17 +14,16 @@ class Solution:
         # 将第一个滑动窗口的最大值（即堆顶元素的负值的相反数）添加到结果列表res中。
         res = [-q[0][0]]
 
-        for i in range(k,n):
+        for i in range(k, n):
             # 将当前元素的负值和索引推入堆中。
             heapq.heappush(q, (-nums[i], i))
             # 该元素已经不在当前的滑动窗口内了
-            while q[0][1]<=i-k:
+            while q[0][1] <= i - k:
                 # 从堆中移除。
                 heapq.heappop(q)
             # 将当前滑动窗口的最大值（即堆顶元素的负值的相反数）添加到结果列表res中。
             res.append(-q[0][0])
         return res
-
 
 
 re = Solution()

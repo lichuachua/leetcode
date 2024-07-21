@@ -18,5 +18,6 @@ class Solution:
                     right -= 1
         return ans
 
-re =Solution()
-print(re.threeSumClosest([-1,2,1,-4],1))
+
+re = Solution()
+print(re.threeSumClosest([-1, 2, 1, -4], 1))

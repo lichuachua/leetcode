@@ -14,3 +14,11 @@ class Solution:
             elif m[stack.pop()] != c:
                 return False
         return len(stack) == 0
+
+
+"""
+Solution：栈模拟
+使用栈模拟，使用map存储每一个括号对，遍历字符串
+若元素为 '['、'{'、'(' 则入栈，
+若元素为']'、'}'、')'，则比较是否是栈中栈顶元素对应的括号，不是则返回false
+"""

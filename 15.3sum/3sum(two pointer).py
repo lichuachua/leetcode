@@ -36,4 +36,8 @@ left 指向 a 元素的下一个位置，  right 指向末尾位置。
 如果nums[a]+nums[left]+nums[right]==0，则得到一个解，将其加入答案数组中，并继续将 left 右移，right 左移；
 如果nums[a]+nums[left]+nums[right]>0，说明 nums[right] 值太大，将 right 向左移；
 如果nums[a]+nums[left]+nums[right]<0，说明 nums[left] 值太小，将 left 右移。
+
+
+Solution：双指针
+数组排序，之后遍历数组，对每一个元素，假设它是 a b c 中的一个，使用双指针，遍历找到剩下两个
 """

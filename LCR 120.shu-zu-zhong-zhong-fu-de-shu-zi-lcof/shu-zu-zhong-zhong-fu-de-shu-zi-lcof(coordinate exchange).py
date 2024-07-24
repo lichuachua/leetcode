@@ -17,3 +17,11 @@ class Solution:
                 documents[i] = tmp
                 '''
         return 0
+
+
+"""
+Solution：下标交换
+同442
+数组长度为 n, 且数字都在 0 ~ n-1 范围内，
+所以只需要判断下标 i 是否与 nums[i] 相等即可（如果都相等，说明没有重复元素）：
+"""

@@ -14,6 +14,5 @@ class Solution:
         return ans
 
 
-
 re = Solution()
-print(re.nextGreaterElements([1,2,3,4,3]))
+print(re.nextGreaterElements([1, 2, 3, 4, 3]))

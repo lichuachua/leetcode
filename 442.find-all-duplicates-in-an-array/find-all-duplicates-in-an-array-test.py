@@ -12,6 +12,7 @@ class Solution:
                 nums[index] = -nums[index]
         return res
 
+
 """
 Solution：置负
 遍历数组，将元素值 对应下标的元素 置为负，

@@ -15,3 +15,10 @@ class Solution:
             if m[i] < 0:
                 return False
         return True
+
+
+"""
+Solution：哈希表
+比较两个字符串长度，不相等返回false
+遍历字符串，将元素存储在map中，之后遍历另外一个字符串查看map中的元素
+"""

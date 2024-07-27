@@ -1,17 +1,18 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        strs.sort()
-        longest, shortest = strs[0], strs[len(strs) - 1]
-        i = 0
-        while i < len(shortest) and i < len(longest):
-            if longest[i] != shortest[i]:
-                return longest[:i]
-            i += 1
-        return longest[:i]
+        res = ""
+        for tmp in zip(*strs):
+            tmp_set = set(tmp)
+            if len(tmp_set) == 1:
+                res += tmp[0]
+            else:
+                break
+        return res
 
 
 """
-Solution：排序，遍历
-先对数组进行排序（按照字母顺序）
-之后遍历第一个元素和最后一个元素，找到找到他们最长的前缀
+Solution：内置函数
+使用zip内置方法，将多个字符串转为纵向元组，即：strs = ["flower", "flow", "flight"]，那么 zip(*strs) 生成的结果是 ('f', 'f', 'f')，('l', 'l', 'l')，('o', 'o', 'i') 
+将元组转为set（去重）
+去重后长度为1，则元素相同
 """

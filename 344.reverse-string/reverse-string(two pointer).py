@@ -8,3 +8,9 @@ class Solution:
             s[left], s[right] = s[right], s[left]
             left += 1
             right -= 1
+
+
+"""
+Solution：对撞指针
+使用对撞指针，从0, len(s) - 1开始往中间靠拢，相互交换
+"""

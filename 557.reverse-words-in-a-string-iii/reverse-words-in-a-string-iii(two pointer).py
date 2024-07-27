@@ -1,6 +1,6 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
-        s = s.split()
+        s = self.splitWords(s)
         for i in range(len(s)):
             s[i] = self.reverseWord(s[i])
         return " ".join(s)
@@ -27,3 +27,10 @@ class Solution:
             left += 1
             right -= 1
         return "".join(s)
+
+"""
+Solution：对撞指针
+类似344题
+使用空格把字符串切分为单词，之后对每一个单词进行反转，
+反转使用对撞指针，从0, len(s) - 1开始往中间靠拢，相互交换
+"""

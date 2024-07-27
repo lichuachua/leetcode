@@ -8,3 +8,10 @@ class Solution:
                 return longest[:i]
             i += 1
         return longest[:i]
+
+
+"""
+Solution：排序，遍历
+先对数组进行排序（按照字母顺序）
+之后遍历第一个元素和最后一个元素，找到找到他们最长的前缀
+"""

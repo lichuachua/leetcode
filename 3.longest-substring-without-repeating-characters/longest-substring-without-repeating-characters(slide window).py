@@ -1,7 +1,7 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         left, right = 0, 0
-        window = dict()
+        windorw = dict()
         res = 0
 
         while right < len(s):
@@ -20,6 +20,7 @@ class Solution:
 
 
 """
+Solution：滑动窗口
 用滑动窗口 window 来记录不重复的字符个数，window 为哈希表类型。 
 设定两个指针：left、right，分别指向滑动窗口的左右边界，保证窗口中没有重复字符。 
 一开始， left、 right 都指向 0。 向右移动right，将最右侧字符s[right] 加入当前窗口window 中，记录该字符个数。 

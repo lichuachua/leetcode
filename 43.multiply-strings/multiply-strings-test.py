@@ -18,7 +18,5 @@ class Solution:
             ans = "".join(str(digit) for digit in nums[:])
         return ans
 
-
-"""
-Solution：模拟
-"""
+re = Solution()
+print(re.multiply("123","456"))

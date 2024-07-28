@@ -10,3 +10,9 @@ class Solution:
             return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
         else:
             return []
+
+
+"""
+Solution：递归
+通过递归调用根->左->右的顺序实现二叉树的前序遍历
+"""

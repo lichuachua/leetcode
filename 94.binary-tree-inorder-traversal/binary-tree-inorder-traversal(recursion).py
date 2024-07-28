@@ -10,3 +10,9 @@ class Solution:
             return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
         else:
             return []
+
+
+"""
+Solution：递归
+通过递归调用左->根->右的顺序实现二叉树的中序遍历
+"""

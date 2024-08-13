@@ -12,14 +12,19 @@ class Solution:
             return result
         queue = [root]
         while len(queue) > 0:
-            level = []
             currentQueue = queue
             queue = []
             for item in currentQueue:
-                level.append(item.val)
                 if item.left is not None:
                     queue.append(item.left)
                 if item.right is not None:
                     queue.append(item.right)
             result += 1
         return result
+
+
+"""
+Solution：迭代
+广度搜索可以直接计算当前树的层级，
+同103，在遍历过程中，层树+1，则结果+1，不需要存储每一层的元素
+"""

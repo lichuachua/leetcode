@@ -6,23 +6,28 @@
 #         self.right = right
 class Solution:
     def minDepth(self, root: Optional[TreeNode]) -> int:
-        # 使用层次遍历
         if root is None:
             return 0
         result = 1
         queue = [root]
         while len(queue) > 0:
-            length = len(queue)
-            i = 0
-            while i < length:
-                value = queue[0]
-                queue = queue[1:]
-                if value.left is None and value.right is None:
+            currentQueue = queue
+            queue = []
+            for item in currentQueue:
+                if item.left is None and item.right is None:
                     return result
-                if value.left is not None:
-                    queue.append(value.left)
-                if value.right is not None:
-                    queue.append(value.right)
-                i += 1
+                if item.left is not None:
+                    queue.append(item.left)
+                if item.right is not None:
+                    queue.append(item.right)
             result += 1
         return result
+
+
+"""
+Solution：迭代
+同104最大深度
+同103，层次遍历在遍历过程中，层树+1，则结果+1，不需要存储每一层的元素。
+与104不同的是，需要判断结点，如果左右都为空，直接返回结果
+
+"""

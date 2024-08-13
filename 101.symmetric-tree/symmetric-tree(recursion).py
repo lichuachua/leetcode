@@ -16,3 +16,9 @@ class Solution:
         if root is None:
             return True
         return self.lcc(root.left, root.right)
+
+"""
+Solution：递归
+使用递归遍历结点的左子树和右子树是否存在，且值相等，如果不成立，说明不对称
+如果成立，则递归遍历左子树的右结点和右子树的左结点，以及右子树的右结点和左子树的左结点是否一
+"""

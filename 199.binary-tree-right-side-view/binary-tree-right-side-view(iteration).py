@@ -6,22 +6,21 @@
 #         self.right = right
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-        res = []
+        result = []
         if root is None:
-            return res
-
-        def iteration(root, level):
-            if root is None:
-                return root
-            if len(res) == level:  # 新增的一层，初始化本层
-                res.append([])
-            res[level].append(root.val)  # 元素添加到当前层
-            iteration(root.left, level + 1)  # 遍历下一层的左子树
-            iteration(root.right, level + 1)  # 遍历下一层的右子树
-
-        iteration(root, 0)
-        result = [row[-1] for row in res]
-
+            return result
+        queue = [root]
+        while len(queue) > 0:
+            level = []
+            currentQueue = queue
+            queue = []
+            for item in currentQueue:
+                level.append(item.val)
+                if item.left is not None:
+                    queue.append(item.left)
+                if item.right is not None:
+                    queue.append(item.right)
+            result.append(level[-1])
         return result
 
 

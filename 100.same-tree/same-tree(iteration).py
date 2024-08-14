@@ -21,3 +21,9 @@ class Solution:
                 qQueue.append(qq.left)
                 qQueue.append(qq.right)
         return True
+
+
+"""
+Solution：迭代
+
+"""

@@ -6,6 +6,8 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
         res = []
@@ -36,4 +38,4 @@ c.left = None
 c.right = None
 
 re = Solution()
-print(re.pathSum(a,5))
+print(re.pathSum(a, 5))

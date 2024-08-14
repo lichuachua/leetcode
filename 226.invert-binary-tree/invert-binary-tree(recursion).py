@@ -23,4 +23,6 @@ class Solution:
 Solution：迭代
 使用队列存储结点。
 遍历 反转当前结点的左右结点，之后将当前结点的左右结点入队。
+其中        queue = [root]和            node = queue.pop(0)
+可以换为        queue = deque([root])  # 使用 deque 作为队列     和            node = queue.popleft()  # 从队列的左端移除节点
 """

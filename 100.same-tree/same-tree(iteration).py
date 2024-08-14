@@ -25,5 +25,5 @@ class Solution:
 
 """
 Solution：迭代
-
+使用遍历（深度或者广度）比较遍历结点。
 """

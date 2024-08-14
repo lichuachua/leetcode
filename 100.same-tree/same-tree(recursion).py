@@ -11,3 +11,8 @@ class Solution:
         elif p is None or q is None or p.val != q.val:
             return False
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+
+"""
+Solution:递归
+递归遍历树，比较两个树相同位置上的结点
+"""

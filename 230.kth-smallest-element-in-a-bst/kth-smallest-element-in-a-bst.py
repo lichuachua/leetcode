@@ -1,11 +1,16 @@
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+from typing import Optional
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
 class Solution:
-    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         res = []
         if root is None:
             return res
@@ -15,18 +20,23 @@ class Solution:
                 stack.append(root)  # 将当前树的根节点入栈
                 root = root.left  # 找到最左侧节点
             root = stack[len(stack) - 1]  # 取最左元素
+            k -= 1
+            if k == 0:
+                return root.val
             res.append(root.val)
             stack.pop()  # 遍历到最左侧，当前节点无左子树时，将最左侧节点弹出
             root = root.right  # 尝试访问该节点的右子树（可能最末尾没有左结点，但是存在右结点）
-        return res
-
-    def findTargetNode(self, root: Optional[TreeNode], cnt: int) -> int:
-        return self.inorderTraversal(root)[-cnt]
+        return 0
 
 
-"""
-Solution：遍历+选择
-类似 230
-二叉搜索树的中序遍历是递增序列，先进行中序遍历，之后在列表中选择第K大的即可
-0094. 二叉树的中序遍历，之后选择第K个元素
-"""
+a, b, c, d = TreeNode(3), TreeNode(1), TreeNode(4), TreeNode(2)
+a.left = b
+a.right = c
+c.right = d
+c.left = None
+d.right = None
+d.left = None
+
+re = Solution()
+res = re.kthSmallest(a, 1)
+print(res)

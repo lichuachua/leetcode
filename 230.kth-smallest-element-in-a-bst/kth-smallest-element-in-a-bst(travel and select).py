@@ -20,13 +20,13 @@ class Solution:
             root = root.right  # 尝试访问该节点的右子树（可能最末尾没有左结点，但是存在右结点）
         return res
 
-    def findTargetNode(self, root: Optional[TreeNode], cnt: int) -> int:
-        return self.inorderTraversal(root)[-cnt]
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        return self.inorderTraversal(root)[k - 1]
 
 
 """
 Solution：遍历+选择
 类似 230
-二叉搜索树的中序遍历是递增序列，先进行中序遍历，之后在列表中选择第K大的即可
+二叉搜索树的中序遍历是递增序列，先进行中序遍历，之后在列表中选择第K小的即可
 0094. 二叉树的中序遍历，之后选择第K个元素
 """

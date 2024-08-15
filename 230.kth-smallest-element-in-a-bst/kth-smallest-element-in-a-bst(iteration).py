@@ -11,21 +11,18 @@ class Solution:
     def lcc(self, root: Optional[TreeNode]):
         if root is None:
             return
-        self.lcc(root.right)
-        if self.k == 0:
+        self.lcc(root.left)
+        if self.k==0:
             return
-        self.k -= 1
-        if self.k == 0:
+        self.k -=1
+        if self.k==0:
             self.res = root.val
             return
-        self.lcc(root.left)
-
-    def findTargetNode(self, root: Optional[TreeNode], cnt: int) -> int:
-        self.res = 0
-        self.k = cnt
+        self.lcc(root.right)
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        self.k = k
         self.lcc(root)
         return self.res
-
 
 """
 Solution:递归

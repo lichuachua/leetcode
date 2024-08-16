@@ -17,6 +17,7 @@ class Solution:
             return True
         return self.lcc(root.left, root.right)
 
+
 """
 Solution：递归
 使用递归遍历结点的左子树和右子树是否存在，且值相等，如果不成立，说明不对称

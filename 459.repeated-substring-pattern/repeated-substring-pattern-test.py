@@ -22,5 +22,6 @@ class Solution:
             return True
         return False
 
+
 re = Solution()
 print(re.repeatedSubstringPattern("abcabcabcabc"))

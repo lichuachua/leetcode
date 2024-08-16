@@ -28,6 +28,7 @@ class Solution:
             right -= 1
         return "".join(s)
 
+
 """
 Solution：对撞指针
 类似344题

@@ -43,4 +43,4 @@ e1.left = None
 e1.right = None
 
 re = Solution()
-print(re.isSameTree(a,a1))
+print(re.isSameTree(a, a1))

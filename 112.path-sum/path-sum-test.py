@@ -24,4 +24,4 @@ c.left = None
 c.right = None
 
 re = Solution()
-print(re.hasPathSum(a,5))
+print(re.hasPathSum(a, 5))

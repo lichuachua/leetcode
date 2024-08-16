@@ -22,6 +22,7 @@ class Solution:
             return True
         return False
 
+
 """
 Solution：KMP
 TODO

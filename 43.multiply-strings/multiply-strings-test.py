@@ -18,5 +18,6 @@ class Solution:
             ans = "".join(str(digit) for digit in nums[:])
         return ans
 
+
 re = Solution()
-print(re.multiply("123","456"))
+print(re.multiply("123", "456"))

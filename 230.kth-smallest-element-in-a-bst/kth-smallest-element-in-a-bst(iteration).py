@@ -12,17 +12,19 @@ class Solution:
         if root is None:
             return
         self.lcc(root.left)
-        if self.k==0:
+        if self.k == 0:
             return
-        self.k -=1
-        if self.k==0:
+        self.k -= 1
+        if self.k == 0:
             self.res = root.val
             return
         self.lcc(root.right)
+
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         self.k = k
         self.lcc(root)
         return self.res
+
 
 """
 Solution:递归
